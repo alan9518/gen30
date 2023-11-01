@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- 
+        estilos internos, para usar estos, 
+        se utiliza la etiqueta <style> en el 
+        <head> y dentro de ella van las reglas de css
+-->
+    <!-- <style>
+      section {
+        border: 1px solid red;
+      }
+
+      span {
+        color: green;
+      }
+    </style> -->
+    <!-- 
+        Hoja de estilos externa, se utiliza la etiqueta <link/>
+        se usa el atributo rel="stylesheet" para indicar 
+        estamos cargando un archivo css
+        el atributo href es para decir en donde se encuentra el archivo
+        Link es para mandar a llamar nuestra hoja de estilos -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Intro CSS</title>
+  </head>
+  <body>
+    <!-- estilos inline, tienen prioridad sobre los demas estilos -->
+    <p style="color: blue; font-size: 20px">Parrafo</p>
+
+    <h1>Main Titulo</h1>
+    <p>Parrafo con estilos de css externo</p>
+
+    <p class="noSubrayado">Este parrafo no deberia estar subrayado</p>
+
+    <section>
+      <!-- 
+            IMPORTANTE
+            los ids no deben repetirse y deben tener nombres
+            muy explicitos
+         -->
+      <span id="spanSection"> Span dentro de una Section </span>
+    </section>
+
+    <!-- Las clases si pueden repetirse 
+        entre distintas etiquetas y se pueden
+        utilizar tantas clases como sean necesarias
+     -->
+    <section>
+      <p class="noSubrayado textoRojo">Parrafo con selector de clase</p>
+    </section>
+
+    <section class="anchoFijo">
+      <p class="noSubrayado textoRojo">Parrafo con selector de clase</p>
+    </section>
+  </body>
+</html>

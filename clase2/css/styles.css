@@ -1,0 +1,54 @@
+body {
+  background-color: black;
+}
+
+/* las comas permiten utilizar 
+    las reglas de CSS en varios selectores a la vez 
+*/
+p,
+h1 {
+  color: white;
+  text-decoration: underline;
+}
+
+section {
+  border: 1px solid blue;
+  background-color: beige;
+}
+
+/* 
+    Reglas de Prioridad
+    1. orden de las clases
+    2. tipo de selector prioridad de menor a mayor
+        1) selector de etiqueta
+        2) selector de clase
+        3) selector de id
+    los selectores de clase e id, ganan en prioridad 
+    independientemente del lugar en donde se hayan 
+    declarado
+    en cambio los selectores de etiqueta son sobreescritos
+    si mas abajo en el codigo se vuelve a crear una
+    regla para la misma etiqueta
+ */
+/* 
+    Referenciar en base al selector de clase 
+    se utliza el caracter '.'
+    .[nombre de la clase]
+*/
+.noSubrayado {
+  text-decoration: none;
+}
+
+/* 
+    Referenciar en base al selctor de id 
+    se utliza el caracter '#'
+    #[nombre del id]
+*/
+#spanSection {
+  text-decoration: line-through;
+  color: black;
+}
+
+.anchoFijo {
+  width: 20px;
+}

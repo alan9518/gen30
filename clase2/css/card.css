@@ -1,0 +1,22 @@
+.card {
+  width: 250px;
+}
+
+.card-body {
+  background-color: gray;
+}
+
+.card-title-text {
+  color: white;
+  text-align: center;
+}
+
+.card-content {
+  font-style: italic;
+}
+
+.card-footer {
+  background-color: lightgray;
+  color: black;
+  text-align: center;
+}
