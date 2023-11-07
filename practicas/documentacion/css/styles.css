@@ -34,17 +34,20 @@
   margin-right: auto;
 }
 
-/* list-style: none, quita el puntito de la izquiera de los elementos de las listas */
-.enlaceListaItem {
+.enlaces li {
   list-style: none;
   padding: 4px;
 }
 
-/* ponemos un color negro para los enlaces */
-.link {
+.enlaces a {
   color: #272727;
 }
 
+.enlaces ul {
+  border: 1px dashed #272727;
+}
+
+/* selector de etiqueta p, clase . id # */
 .docsContainer {
   width: 600px;
   margin-left: auto;
@@ -74,5 +77,13 @@
   color: #72ff72;
   padding: 8px;
   border-radius: 8px;
+  margin: 8px;
+}
+
+.docItem p:nth-child(2) {
+  color: #917c7c;
+}
+
+.docItem h3 {
   margin: 8px;
 }

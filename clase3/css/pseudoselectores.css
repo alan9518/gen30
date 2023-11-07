@@ -1,0 +1,122 @@
+.hoverImage {
+  width: 150px;
+}
+
+/* 
+  para acceder a las pseudoclases, 
+  se utiliza ":" despues del selector 
+  hover = el estado cuando ponemos el mouse sobre un elemento
+  */
+.hoverImage:hover {
+  width: 250px;
+  filter: sepia(0.5);
+}
+
+.buttonHover {
+  background-color: transparent;
+  border: 1px solid blue;
+  padding: 8px;
+}
+
+/* 
+  se cambia el background-color y 
+  el color de texto cuando el mouse pasa por el boton
+  */
+.buttonHover:hover {
+  background-color: blue;
+  color: white;
+}
+
+/* :visited afecta los estilos de los enlaces cuando ya han sido visitados  */
+a:visited {
+  color: red;
+}
+
+/* :link afecta los estilos de los enlaces cuando aun no han sido visitados  */
+a:link {
+  color: brown;
+}
+
+/* :active afecta los estilos de los enlaces cuando estan recibiendo un click  */
+a:active {
+  text-decoration: none;
+  background-color: yellow;
+}
+
+/* first-child :selecciona el primer elemento hijo 
+                que sea li dentro la lista con
+                la clase listaNumeros  
+    last-child : selecciona el ultimo elemento hijo 
+                que sea li dentro la lista con
+                la clase listaNumeros  
+*/
+.listaNumeros li:first-child,
+.listaNumeros li:last-child {
+  background-color: yellow;
+  color: red;
+}
+
+.caja {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  margin: 10px 0;
+}
+
+.cajas .caja:first-child {
+  width: 150px;
+  height: 150px;
+}
+
+/* nth-child(): selecciona el elemento hijo 
+                que sea li dentro la lista con
+                la clase listaNumeros  en base a un indice
+                busca de arriba hacia abajo
+*/
+.listaNumeros li:nth-child(3),
+.listaNumeros li:nth-child(8) {
+  background-color: blue;
+}
+
+/* nth-child(): selecciona el elemento hijo 
+                que sea li dentro la lista con
+                la clase listaNumeros  en base a un indice
+                busca de abajo hacia arriba
+*/
+.listaNumeros li:nth-last-child(1) {
+  background-color: green;
+}
+
+/* psuedoelementos */
+/* 
+  para acceder a los pseudoelementos, utilizamos "::"
+  despues del selector.
+
+  :first-letter selecciona la primera letra del selector
+*/
+.textoLetraGrande::first-letter {
+  color: green;
+  font-size: 30px;
+}
+
+/* ::before agrega contenido antes de que 
+  el selector sea renderizado en el navegador,
+  el contenido que se agrega no es contenido HTML
+  por lo tanto no tiene interactividad
+*/
+.beforeExample::before {
+  content: "Hola mundo";
+}
+
+/* ::after agrega contenido despues de que 
+  el selector sea renderizado en el navegador,
+  el contenido que se agrega no es contenido HTML
+  por lo tanto no tiene interactividad
+*/
+.beforeExample::after {
+  content: "aparezco despues del texto de HTML";
+}
+
+.listaNumeros li::before {
+  content: "😊";
+}

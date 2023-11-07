@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Selectores avanzados</title>
+  </head>
+  <body>
+    <h1>Selectores avanzados</h1>
+
+    <a href="./pages/pseudoselectores.html"> Ver pseudoselectores</a>
+
+    <!-- 
+        camelcase: 
+            primera letra minuscula y la siguiente palabra mayuscula
+            selectorHijo
+        snakecase
+            selector_hijo
+            selector-hijo
+    -->
+    <section id="selectorHijo">
+      <!-- 
+          el selector hijo selecciona los hijos directos de la etiqueta especificada
+          .contenedor > p {
+            ...css
+          }
+          esa regla afecta a la etiqueta p que es hijo de la clase contenedor
+       -->
+      <h3>Selector Hijo</h3>
+      <div class="contenedor">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, ipsam
+          harum! Facere esse nostrum eum officia in omnis vitae, ex doloremque
+          nisi, ullam et ipsa! Aspernatur quam maiores laborum atque?
+        </p>
+      </div>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Autem, ipsam
+        harum! Facere esse nostrum eum officia in omnis vitae, ex doloremque
+        nisi, ullam et ipsa! Aspernatur quam maiores laborum atque?
+      </p>
+    </section>
+
+    <section id="selectorHermano">
+      <!-- 
+          el selector her,ano selecciona el hermano directo de la etiqueta especificada
+          #selectorHermano h3 + p  {
+            ...css
+          }
+          esa regla afecta a la primera etiqueta p que es sea hermana directa de la etiqueta h3
+          dentro de la section con id selectorHermano
+       -->
+      <h3>Selector Hermano</h3>
+      <p>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+        consequatur omnis dolorem suscipit. Rerum debitis corrupti incidunt
+        voluptatum fuga eligendi nihil quibusdam nesciunt, blanditiis ad
+        repudiandae hic vitae totam dignissimos?
+      </p>
+      <div class="container">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+          consequatur omnis dolorem suscipit. Rerum debitis corrupti incidunt
+          voluptatum fuga eligendi nihil quibusdam nesciunt, blanditiis ad
+          repudiandae hic vitae totam dignissimos?
+        </p>
+      </div>
+    </section>
+
+    <section id="selectorHermanoGeneral">
+      <!-- 
+          el selector hermano geeneral selecciona el hermano directo de la etiqueta especificada
+          #selectorHermano h3 ~ p  {
+            ...css
+          }
+          esa regla afecta a todas las etiquetas p que es sea hermana directa de la etiqueta h3
+          dentro de la section con id selectorHermanoGeneral
+       -->
+      <h3>Selector Hermano Adyacente</h3>
+      <span>
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+        consequatur omnis dolorem suscipit. Rerum debitis corrupti incidunt
+        voluptatum fuga eligendi nihil quibusdam nesciunt, blanditiis ad
+        repudiandae hic vitae totam dignissimos?
+      </span>
+      <div class="contenedor">
+        <h3>sub titutlo 1</h3>
+        <h5>subtitulo 2</h5>
+
+        <span>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo
+          consequatur omnis dolorem suscipit. Rerum debitis corrupti incidunt
+          voluptatum fuga eligendi nihil quibusdam nesciunt, blanditiis ad
+          repudiandae hic vitae totam dignissimos?
+        </span>
+      </div>
+    </section>
+
+    <!-- 
+      selector atributo, nos permite buscar elementos en 
+      base a ciertos atributos de la etiqueta
+      a[href="google.com"] {
+        color: red;
+      }
+      selecciona todas las etiquetas "a" cuyo atributo href sea "google.com"
+     -->
+    <section id="selectorAtributo">
+      <a href="google.com"> ver google</a>
+      <a href="kodemia.mx"> ver kodemia</a>
+    </section>
+  </body>
+</html>
