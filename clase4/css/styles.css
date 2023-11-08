@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  color: white;
+  margin: 10px;
+}
+
+.boxAzul {
+  background-color: blue;
+}
+
+/* position relative
+    relative habilita las propiedades
+    de direccion
+    top, left, bottom, right 
+    para mover el elemento desde el lado derecho
+    se usan valores negativos
+    como left:-20px o right:20px
+ */
+.posicionRelativa {
+  position: relative;
+}
+
+.moverElementoRelativo {
+  left: 20px;
+  top: 120px;
+}
+
+/* 
+    position absolute 
+    hay 2 casos. 
+        1) los elementos se posicionan de forma absoluta con el documento
+            el documento es el area visible de la pagina
+        2) los elementos se posicionan de forma absoluta con el primer elemento padre
+            contenedor cuya posicion sea relativa
+*/
+.posicionAbsoluta {
+  position: absolute;
+}
+
+.moverElementoAbsoluto {
+  margin: 0;
+  top: 0;
+  left: 0;
+}
+
+.ejemploAbsolutoYRelativo {
+  margin-top: 160px;
+  width: 600px;
+  height: 300px;
+  border: 1px solid #333;
+  background-color: azure;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(1) {
+  background-color: purple;
+  left: 120px;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(2) {
+  background-color: green;
+  left: 240px;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(3) {
+  background-color: rgb(64, 92, 64);
+  left: 360px;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(5) {
+  background-color: rgb(17, 36, 89);
+  left: 480px;
+}
+
+/* segunda fila */
+.ejemploAbsolutoYRelativo .box:nth-child(6) {
+  background-color: purple;
+  top: 120px;
+  left: 0;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(7) {
+  background-color: purple;
+  top: 120px;
+  left: 120px;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(8) {
+  background-color: brown;
+  top: 120px;
+  left: 240px;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(9) {
+  background-color: brown;
+  top: 120px;
+  left: 360px;
+}
+
+.ejemploAbsolutoYRelativo .box:nth-child(10) {
+  background-color: brown;
+  top: 120px;
+  left: 480px;
+}
+
+/* posicion fixed */
+.posicionFixed {
+  position: fixed;
+  top: 120px;
+  right: 0;
+}
+
+/* posicion sticky */
+.stickyContainer {
+  width: 400px;
+  border: 1px solid #333;
+}
+
+.positionSticky {
+  padding: 5px;
+  background-color: #cae8ca;
+  border: 2px solid #4caf50;
+  position: sticky;
+  top: 0;
+}
+
+.stickyContent {
+  padding-bottom: 2000px;
+}

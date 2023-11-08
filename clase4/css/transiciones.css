@@ -1,0 +1,90 @@
+.buttonHover {
+  background-color: transparent;
+  border: 1px solid blue;
+  width: 150px;
+  padding: 8px;
+  transition: all 600ms ease;
+  cursor: pointer;
+  /* transition: background-color 1s ease-in-out, color 1s ease-in-out; */
+}
+
+/* 
+    se cambia el background-color y 
+    el color de texto cuando el mouse pasa por el boton
+*/
+.buttonHover:hover {
+  background-color: blue;
+  color: white;
+  /* width: 250px; */
+}
+
+.box {
+  transition: width 500ms linear;
+}
+
+.box:hover {
+  width: 700px;
+}
+
+/* animations */
+.parent {
+  width: 400px;
+  height: 400px;
+  background-color: #004466;
+  margin: 16px;
+}
+
+.child {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  /* animation: 
+    nombre de la animacion, duracion, efecto, al usar infinite, nuestra animacion nunca se detendra */
+  animation: mover-cuadro 5s linear infinite;
+}
+
+/* 
+  animacion css 
+  el nombre de la animacion de mover-cuadro
+  en las animaciones hay que definir lo que 
+  sucede en cada frame que compone la animacion
+
+*/
+@keyframes mover-cuadro {
+  /* translateX mueve un elemento a atravez de su eje X (horizontal) */
+  /* en frame inicial de la animacion, mantenemos el cuadro rojo en su posicion original
+      en la esquina superior izquiera
+   */
+  0% {
+    transform: translateX(0);
+  }
+
+  /* en este frame, movemos el cuadro 200px hacia abajo  utilizando 
+  translateY, el cual desplaza el elemento en su eje y (vertical),
+  el cuadro padre, mide 400px de alto, el cuadro mide 200px, la mitad
+    por lo tanto, si lo movemos 200px hacia abajo, llegamos hasta el final 
+    del cuadro */
+  25% {
+    transform: translateY(200px);
+  }
+
+  /* en este frame, movemos el cuadro 200px hacia abajo y 200px hacia la derecha */
+  50% {
+    transform: translateX(200px) translateY(200px);
+  }
+
+  /* en este frame, movemos el cuadro rojo hacia la derecha 
+    el cuadro padre, mide 400px de ancho, el cuadro mide 200px, la mitad
+    por lo tanto, si lo movemos 200px hacia la derecho, llegamos hasta el final 
+    del cuadro
+  */
+  75% {
+    transform: translateX(200px);
+  }
+
+  /* finalmente, regresamos el cuadro a su posicion original, \
+  al final de la animacion   */
+  100% {
+    transform: translateX(0);
+  }
+}
