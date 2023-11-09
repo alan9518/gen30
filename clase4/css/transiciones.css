@@ -88,3 +88,36 @@
     transform: translateX(0);
   }
 }
+
+.bounceIn {
+  animation-name: rebotarTexto;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+
+  width: 200px;
+  margin: 10px auto;
+  border: 1px solid red;
+}
+
+@keyframes rebotarTexto {
+  0% {
+    transform: scale(0.1);
+  }
+  10% {
+  }
+  20% {
+    background-color: #000;
+    color: white;
+  }
+  30% {
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+    background-color: white;
+    color: #000;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
