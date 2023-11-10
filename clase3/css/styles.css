@@ -1,0 +1,30 @@
+#selectorHijo {
+  border: 1px solid red;
+  margin: 16px;
+  padding: 16px;
+}
+
+/* selector hijo (>)
+    selecciona a los hijos directos de
+    la etiqueta padre
+ */
+#selectorHijo .contenedor > p {
+  color: blue;
+}
+
+#selectorHermano h3 + p {
+  background-color: cyan;
+  outline: red solid;
+}
+
+#selectorHermanoGeneral h3 ~ span {
+  background-color: yellow;
+}
+
+a[href="google.com"] {
+  color: red;
+}
+
+a[href="kodemia.mx"] {
+  color: green;
+}

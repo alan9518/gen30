@@ -1,0 +1,60 @@
+/* estilos base son para pantallas de 600px para abajo */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+  barra superior de navegacion
+  position: fixed, pone elemento fijo en la pantalla
+  top: 0 deja el elemento pegado en el tope
+  superior de la pantalla
+ */
+.topNav {
+  background-color: #292d33;
+  height: 30px;
+  color: white;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* 
+  definimos el ancho del contenedor 
+  como el 90% de su elemento padre,
+  si elemento padre mide 1000px de ancho
+  este contenedor, medira 900px y asi sucesivamente
+  si crece o achica
+  */
+.container {
+  width: 90%;
+  /* centramos usando margenes laterales */
+  margin: 0 auto;
+}
+
+article {
+  outline: solid red;
+}
+
+.mainContainer {
+  margin-top: 45px;
+  padding: 10px;
+  /* position: relative; */
+  /* top: 55px; */
+}
+
+.textoCentrado {
+  text-align: center;
+}
+
+.contenedorImagen {
+  outline: solid red;
+  width: 80%;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.imagenArticle {
+  width: 100%;
+}

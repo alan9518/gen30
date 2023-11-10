@@ -1,0 +1,74 @@
+/* 
+    Estrategias para responsividad
+    1.usar medidas dinamicas para los contenedores    
+    2. usar mediaqueries
+
+*/
+
+/* contenedorFijo usa un ancho estatico de 700px, 
+    por lo tanto su ancho  */
+.contenedorFijo {
+  width: 700px;
+  height: 200px;
+  background-color: black;
+}
+
+.contenedorDinamico {
+  margin-top: 20px;
+  height: 150px;
+  background-color: blue;
+  width: 80%;
+}
+
+.contenedorDinamico2 {
+  background-color: green;
+}
+
+.imagenResponsiva {
+  width: 300px;
+}
+
+/* Dispositivos Extra pequeños (smartphones pequeños, 600px para abajo) */
+@media screen and (max-width: 600px) {
+  body {
+    background-color: red;
+  }
+
+  .imagenResponsiva {
+    width: 80%;
+  }
+}
+
+/* (tablets en vertical(portrait) y celulares mas grandes, 600px en adelante) */
+@media screen and (min-width: 600px) {
+  body {
+    background-color: rgb(62, 151, 154);
+  }
+}
+
+/* (tablets en horizontal (landscape), 768px en adelante) */
+@media screen and (min-width: 768px) {
+  body {
+    background-color: #079e46;
+  }
+}
+
+/* (laptops/monitores pequeñas, 992px en adelante) */
+@media screen and (min-width: 992px) {
+  body {
+    background-color: rgb(95, 84, 2);
+  }
+}
+
+/* (laptops and monitores, 1200px en adelante) */
+@media screen and (min-width: 1200px) {
+  body {
+    background-color: #336187;
+  }
+
+  .imagenResponsiva {
+    width: 100%;
+    max-width: 1300px;
+    display: none;
+  }
+}
