@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* hace que las dimensiones sean mas exactas
+     hace que el padding y el border pasen a 
+     formar parte del cálculo del ancho de la 
+     caja y no lo suman posteriormente.
+   */
+  box-sizing: border-box;
+}
+
+.container {
+  width: 80%;
+  min-height: 700px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 10px solid #000;
+  position: relative;
+}
+
+.containerFlex {
+  /* display:flex, convierte el contenedor en una caja flexbible */
+  display: flex;
+  /* direcciones: row, row-reverse, column, column-reverse
+   */
+  flex-direction: row;
+  /* justify-content, determina 
+    como se distribuyen los elementos 
+    en el main axis (horizontal) del contenedor
+    flex-start, flex-end, center, 
+    space-around, space-between, space-evenly
+*/
+  justify-content: space-around;
+  /* 
+    align-items, determina como se
+    distribuyen los elementos
+    en el cross axis (vertical) del 
+    contenedor dentro de la fila
+    flex-start, flex-end, center
+   */
+  align-items: flex-end;
+  /* cuando los elementos hijo del contenedor 
+    exceden las medidas de su padre, 
+    flex:wrap hace que se distribuyan en multiple
+    filas de forma automatica
+   */
+  flex-wrap: wrap;
+  /* si tenemos habilitado flex:wrap, entonces, 
+    se habilita la propiedad align-content, con la cual 
+    podemos alinear verticalmente las filas creadas
+    con flex:wrap wrap
+   */
+  align-content: space-around;
+}
+
+/* flex container con direccion en columna 
+    IMPORTANTE
+    cuando usamos flex-direction: column;
+    los main axis y cross axis, se invierten
+    en direction:column, 
+        el main axis es el eje vertical
+        el cross axis es el eje horizontal
+*/
+.containerFlex-col {
+  display: flex;
+  flex-direction: column;
+  /* en las columnas, como los ejes 
+    han sido invertidos 
+    align-items, distrinuye las columnas de forma horizontal
+    */
+  align-items: center;
+  /* en las columnas, como los ejes 
+    han sido invertidos 
+    justify-content, distrinuye las columnas de forma vertical
+    */
+  justify-content: space-evenly;
+  max-height: 600px;
+  flex-wrap: wrap;
+}
+
+.containerFlex-row {
+  align-items: center;
+}
+
+/* cambiar orden de elementos */
+/* order: nos permite cambiar el 
+    orden de los elementos hijo dentro 
+    del contendor flex  
+*/
+.containerFlex-reOrder .item-1 {
+  order: 3;
+}
+
+.containerFlex-reOrder .item-2 {
+  order: 1;
+}
+
+.containerFlex-reOrder .item-3 {
+  order: 2;
+}
+.containerFlex-grow {
+  align-items: flex-start;
+}
+/* propiedad flex-grow
+    flex-grow, le dice al contendor
+    flex que tanto pueden crecer los 
+    elementos hijo del contenedor flex
+    el valor indica la prioridad con la que crece
+ */
+.containerFlex-grow .item-1 {
+  flex-grow: 1;
+}
+
+/*  */
+.containerFlex-grow .item-2 {
+  flex: 5;
+  align-self: center;
+}
+
+.containerFlex-grow .item-3 {
+  flex-grow: 1;
+  align-self: flex-end;
+}
+
+.cajaRoja {
+  width: 150px;
+  height: 150px;
+  background-color: #fb7185;
+  padding: 1em;
+  font-weight: 900;
+  color: #f1f5f9;
+  text-align: center;
+  border: 10px solid #e11d48;
+  /* border-radius: 50%; 
+    convierte una caja cuandrada en circulo */
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+/* ejes de colores para ejemplo */
+.axis {
+  position: absolute;
+  z-index: 20;
+}
+
+.cross-axis {
+  left: 50%;
+  transform: translateX(-50%);
+  width: 5px;
+  height: 100%;
+  background-color: blue;
+}
+
+.main-axis {
+  top: 50%;
+  transform: translateY(-50%);
+  height: 5px;
+  width: 100%;
+  background-color: red;
+}
+.main-axis-col {
+  background-color: blue;
+}
+.cross-axis-col {
+  background-color: red;
+}
+
+.axis::after {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: 2em;
+}
+
+.main-axis::after {
+  position: absolute;
+  content: "Main Axis";
+  color: red;
+}
+
+.main-axis-col::after {
+  position: absolute;
+  content: "Cross Axis";
+  color: blue;
+}
+
+.cross-axis::after {
+  white-space: nowrap;
+  content: "Cross Axis";
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: blue;
+}
+
+.cross-axis-col::after {
+  white-space: nowrap;
+  content: "Main Axis";
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  color: orange;
+}
