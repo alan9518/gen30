@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// declaracion de variables
+$colorFondoLista: red;
+$colorBordeCajas: black;
+$colorFondoNavbar: #797979;
+$bordeGrueso: 10px solid $colorBordeCajas;
+$bordeLigero: 1px dashed $colorBordeCajas;
+$paddingNavbar: 8px;
+
+// crear mixins reusables
+@mixin cajaFlexCentradaSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@import "contenedor";
+@import "navbar";

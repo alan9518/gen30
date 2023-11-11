@@ -1,0 +1,35 @@
+// nesting o nesteo o agrupacion
+.container {
+  width: 200px;
+  height: 150px;
+  border: $bordeGrueso;
+  ul {
+    @include cajaFlexCentradaSpaceBetween;
+    background-color: $colorFondoLista;
+    li {
+      color: white;
+    }
+    li:nth-child(2) {
+      color: black;
+    }
+    li:hover {
+      font-size: 30px;
+    }
+  }
+  p {
+    text-decoration: underline;
+  }
+}
+
+.ejemplo {
+  @include cajaFlexCentradaSpaceBetween;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 200px;
+  .cajas {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    margin: 20px;
+  }
+}

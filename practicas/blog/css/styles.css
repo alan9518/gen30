@@ -1,0 +1,137 @@
+/* estilos base son para pantallas de 600px para abajo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #292d33;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #292d33;
+
+  color: white;
+  padding: 20px 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+/* 
+  barra superior de navegacion
+  position: fixed, pone elemento fijo en la pantalla
+  top: 0 deja el elemento pegado en el tope
+  superior de la pantalla
+ */
+.menuNav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.menuNav li {
+  list-style: none;
+}
+
+.menuNav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 
+  definimos el ancho del contenedor 
+  como el 90% de su elemento padre,
+  si elemento padre mide 1000px de ancho
+  este contenedor, medira 900px y asi sucesivamente
+  si crece o achica
+  */
+.container {
+  width: 90%;
+  /* centramos usando margenes laterales */
+  margin: 0 auto;
+}
+
+.cajaFlex {
+  display: flex;
+  flex-direction: column;
+}
+
+.articulo {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  margin: 20px 0;
+}
+
+.mainContainer {
+  margin-top: 45px;
+  padding: 10px;
+  height: 89vh;
+  /* position: relative; */
+  /* top: 55px; */
+}
+
+.textoCentrado {
+  text-align: center;
+}
+
+.contenedorImagen {
+  width: 90%;
+  padding: 10px;
+}
+
+.imagenArticle {
+  width: 100%;
+}
+
+.contenedorFechas span {
+  color: #cdc9c9;
+}
+
+.contenedorTitulo {
+  padding: 8px;
+}
+
+footer {
+  padding: 16px;
+  background-color: #434445;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  /* poner el footer al final de la pagina */
+  /* position: fixed;
+  bottom: 0;
+  width: 100%; */
+}
+
+/* media query o breakpoint para tablets */
+/* (tablets en vertical(portrait) y celulares mas grandes, 600px en adelante) */
+@media screen and (min-width: 600px) {
+  .cajaFlex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .articulo {
+    width: 45%;
+    margin: 10px 10px;
+  }
+}
+
+/* media query para laptops peque;as en adelante */
+/* (laptops/monitores pequeñas, 992px en adelante) */
+@media screen and (min-width: 992px) {
+  .articulo {
+    width: 30%;
+  }
+}

@@ -1,0 +1,19 @@
+.navbar {
+  //   display: flex;
+  //   justify-content: space-between;
+  //   align-items: center;
+  @include cajaFlexCentradaSpaceBetween;
+  background-color: $colorFondoNavbar;
+  padding: $paddingNavbar;
+  width: 100%;
+  ul {
+    // display: flex;
+    // align-items: center;
+    // justify-content: space-between;
+    @include cajaFlexCentradaSpaceBetween;
+    list-style: none;
+    li {
+      margin: 0 8px;
+    }
+  }
+}
