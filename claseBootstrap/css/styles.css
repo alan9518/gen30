@@ -1,0 +1,23 @@
+.miContainer {
+  outline: solid red;
+}
+
+.miGrid {
+  border: 1px solid blue;
+}
+
+.miRow {
+  padding: 10px;
+}
+
+.miCol {
+  border: 1px solid black;
+}
+
+.miGridFijo {
+  margin-top: 40px;
+}
+
+.miCol2 {
+  border: 1px solid red;
+}
